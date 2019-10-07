@@ -431,11 +431,10 @@ def download_multiprocess(
 
         with open(os.path.join(error_filename), 'w+') as error_file:
             error_file.write(json.dumps(collected_errors))
-            print('Summary of errors written to %s' % error_filename)
+            print(f'Summary of errors written to {error_filename}.')
 
     print(
-        'Of %s items attempted downloading, %s had errors.'
-        % (len(remaining_items), len(collected_errors))
+        f'Of {len(remaining_items)} items attempted downloading, {len(collected_errors)} had errors.'
     )
 
     print('Finished downloading chunks.')
